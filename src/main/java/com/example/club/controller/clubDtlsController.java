@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/club")
+@RequestMapping("/api/club")
+@CrossOrigin("*")
 public class clubDtlsController {
     @Autowired
     private clubDtlsRepository culbdtlsrepository;
 
-    @GetMapping
+    @GetMapping("/get")
     public List<club_dtls> getAllClubDtls(){
         return culbdtlsrepository.findAll();
     }
