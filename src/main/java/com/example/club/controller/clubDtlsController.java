@@ -47,6 +47,10 @@ public class clubDtlsController {
     public club_dtls createEmployee(@RequestBody club_dtls clubdtls) {
         return culbdtlsrepository.save(clubdtls);
     }
+    @PostMapping("/save/club-List")
+    public List<club_dtls> createEmployeeList(@RequestBody List<club_dtls> clubdtls) {
+        return culbdtlsrepository.saveAll(clubdtls);
+    }
 
     @PostMapping("/save/player")
     public PlayerDtls createPlayers(@RequestBody PlayerDtls playerDtls) {
@@ -56,6 +60,10 @@ public class clubDtlsController {
     @PostMapping("/save/manager")
     public ManagerDetails createManager(@RequestBody ManagerDetails managerDtls){
         return ManagerDtlsRepository.save(managerDtls);
+    }
+    @PostMapping("/save/manager-List")
+    public List<ManagerDetails> createmanagerList(@RequestBody List<ManagerDetails> managerDtls) {
+        return ManagerDtlsRepository.saveAll(managerDtls);
     }
 
 
