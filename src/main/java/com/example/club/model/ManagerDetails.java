@@ -34,7 +34,7 @@ public class ManagerDetails {
     String manager_age;
 
     @Column(name = "mobno")
-    Integer manager_mobno;
+    Long manager_mobno;
 
     @Column(name = "email")
     String manager_email;
